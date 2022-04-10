@@ -17,10 +17,10 @@ public class P8_String {
 		QuestionsOnString obj = new QuestionsOnString();
 
 		String s1 = new String("75457");
-		String s2 = new String("7545a");
+		String s2 = new String("75457");
 
 		obj.palindromeOrNot(s1);
-		obj.reverseOfAString(s1);
+		obj.reverseOfAString(s2);
 		obj.stringEqualOrNot(s1, s2);
 
 	}
@@ -29,18 +29,35 @@ public class P8_String {
 
 class QuestionsOnString {
 
-	void palindromeOrNot(String s) {
-		// Write Logic Here!
+	void palindromeOrNot(String s)
+	{
+		  String rev="";
+		  int length = s.length();
+		  for ( int i = length - 1; i >= 0; i-- )
+		         rev = rev + s.charAt(i);
+		 
+		      if (s.equals(rev))
+		         System.out.println(s+" is a palindrome");
+		      else
+		         System.out.println(s+" is not a palindrome");
+		  
+		
 
 	}
 
 	void reverseOfAString(String s) {
-		// Write Logic Here!
+		String rev="";
+		  int length = s.length();
+		  for ( int i = length - 1; i >= 0; i-- )
+		         rev = rev + s.charAt(i);
+		  
+		  System.out.println("Reverse of the given string is "+rev);
 
 	}
 	
-	void stringEqualOrNot(String s1,String s2) {
-		// Write Logic Here!
+	void stringEqualOrNot(String s1,String s2)
+	{
+		System.out.println(s1.equals(s2));
 		
 	}
 }
