@@ -1,43 +1,40 @@
 package Unit_01;
-/* 
--Variables in Java is a data container that saves the data values during Java program execute.
 
- Types of variables :
- -In Java , there are three types of variables :
+/*
+ * Variable in Java is a data container that saves the data values during Java program executed
  
- .Local Variables - declared inside the body of a method
- 
- .Instance Variables - they are defined without the STATIC keyword.
-  - They are defined outside a method declaration.
-  - They are object specific and are known as instance variables.
-  
- . Static Variables - they are defined with the STATIC keyword.
-     - They are initialized only once , at the start of the program execution.
-     - These static variables should be initialized first , before the initialization of any
-     
-Data Types In Java       
+ * there are three types of variables in java 
+ * 1. local variables : declared inside method 
+ * 2. static variable : declared under class and can be accessed using class name
+ * 3. instance variable : declared under class. it belongs to object and accessed using object name,
+ * 
  */
-public class P3_Task01_VariablesAndDataTypeInJava{
-	
-	static int q = 11;
-	int p = 10;
 
-	public static void main(String[] args) {
+//write a java Program to demonstrate types of variables in Java, implement different data types
+//and demonstrate type conversion and type casting 
+
+
+public class P3_Task01_VariablesAndDataTypesInJava{
+
+	public static void main(String[] args) 
+	{
 		
-		// Valid Declarations
-		int a, b, c;
+		
+		//how to declare variable in java: valid declarations
+		
+		int a,b,c;   //local variables
 		float pi;
 		double d;
 		char e;
 		
-		// Valid Initializations
-		pi = 3.14f;
-		d = 20.22d;
-		e = 'v';
+		//how to initialise variable in java: Valid Initialisations
+		pi=3.14f;
+		d=20.22d;
+		e='v';
 		
-		a = 10;
-		b = 10;
-		c = 10;
+		a=10;
+		b=10;
+		c=10;
 		
 		System.out.println(a);
 		System.out.println(b);
@@ -47,114 +44,87 @@ public class P3_Task01_VariablesAndDataTypeInJava{
 		System.out.println(d);
 		System.out.println(e);
 		
-		int myNum = 5; // Integer (whole number)
-		float myFloatNum = 5.99f; // Floating point number
-		char myLetter = 'D'; // Character
-		boolean myBool = true; // Boolean
-		String myText = "Hello"; // String
+		
+		//different data types
+		int myNum = 5; 			//integer (whole number)
+		float myFloatNum=5.99f; //floating point number
+		char myLetter='D'; 		//character
+		boolean myBool= true; 	//Boolean 
+		String myText ="hello"; //string
+		byte myByte=10;				//byte
+		long myLong = 10L;			//long
+		
+		
 		
 		System.out.println(myNum);
 		System.out.println(myFloatNum);
 		System.out.println(myLetter);
 		System.out.println(myBool);
 		System.out.println(myText);
+		System.out.println(myByte);
+		System.out.println(myLong);
 		
 		/*
-		 * Java Variable Type Conversion & Type Casting: Details are in OneNote
+		 * Java Variables Type Conversion & Type casting 
 		 */
 		
 		double f;
-		int i = 10;
-		f = i; // Type Conversion
+		int i=10;
+		f=i;  		//Example of Type Conversion
 		
-		double g = 10;
+		double g=10;
 		int j;
-		j = (int) g; // Type Casting
+		j = (int)g; //Example of Type Casting
 		
 		System.out.println(f);
 		System.out.println(i);
 		System.out.println(g);
 		System.out.println(j);
 		
-		byte k = 10; // 1 byte
-		boolean l = true; // 1 bit = true or false only
-		long m = 10L;
-		float n = 1.2f;
-		double o = 1.2d;
 		
-		System.out.println(k);
-		System.out.println(l);
-		System.out.println(m);
-		System.out.println(n);
-		System.out.println(o);
 		
-		System.out.println(ABC.j); //data + function/methods
-		// ABC.display();
+		System.out.println(ABCD.j); //using static variables of class ABC
 		
-		ABC obj1 = new ABC();
-		System.out.println(obj1.i++);
-		System.out.println(obj1.i);
+		ABCD obj1 = new ABCD();
+		System.out.println(obj1.i); //instance variables of object obj1
 		
-		ABC obj2 = new ABC();
-		System.out.println(obj2.i);
+		ABCD obj2 = new ABCD();
+		System.out.println(obj2.i); //instance variables of object obj2
 		
-		//System.out.println(obj1.j++);
-		//System.out.println(obj1.j);
-		//System.out.println(obj2.j);
+		ABCD.print();
 		
-		System.out.println(ABC.j++);
-		System.out.println(ABC.j);
-		
-		ABC.typeconversionAndtypeCasting();
-		
+	
+
 	}
 	
-	int r = 10;
+	int r=10; //instance variable
 	
-	void display() {
-		
-		int a = 5; // local Variable
-		System.out.println("This is Display Method");
+	void display()
+	{
+		int a = 5;  //local variable
+		System.out.println("This is Display method");
 		System.out.println(a);
 		
 	}
 
 }
 
-class ABC {
+class ABCD
+{
+	static int j=10;  //class variable/static variable
 	
-	static int j = 10; // class variable/static variable
-	int i = 10; // Instance Variable
+	int i=10; 		  //instance variable
 	
-	static void display() {
-		
-		int a = 5; // local Variable
-		System.out.println("This is Display Method");
+	void display()
+	{
+		int a = 5;  //local variable //this variable is not accessable in main method 
+		System.out.println("This is Display method");
 		System.out.println(a);
 		
 	}
 	
-	static void typeconversionAndtypeCasting() {
-		
-		/*
-		 * double f; //8 bytes = 64 bits/slots int i = 10; // 4 bytes = 32 bits/slots f
-		 * = i; //Type Conversion System.out.println(f);
-		 * 
-		 *  double g = 10; //64 int j; //32 j = (int)g;
-		 */
-		
-		double f; //64 slots
-		int i = 10; //32 slots
-		f = i; //Type Conversion
-		System.out.println(f);
-		
-		double g = 10; //64
-		int j; //32
-		j = (int)g; // Type Casting
-		
-		//32 bits = 64 bits
-		
-		System.out.println(i);
-		System.out.println(j);
+	static void print()   //static method
+	{
+		System.out.println("hello");
 	}
 }

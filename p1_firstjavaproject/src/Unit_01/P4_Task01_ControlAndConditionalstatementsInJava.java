@@ -91,12 +91,14 @@ public class P4_Task01_ControlAndConditionalstatementsInJava {
 		 
 		 void JumpStatements() {
 			 //Break
-			 for(int i=0;i<=10;i++) {
+			 for(int i=1;i<=10;i++) {
 				System.out.println(i);
 				if(i==6) {
 					break;
+					
 				}
-				System.out.println(i);
+				//System.out.println(i);
+				System.out.print("break ");
 			 }
 			 for(int i=0;i<=10;i++) {
 				 if(i==6) {
