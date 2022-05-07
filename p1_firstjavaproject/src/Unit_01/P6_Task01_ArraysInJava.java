@@ -34,7 +34,7 @@ public class P6_Task01_ArraysInJava {
 		int[] array2;
 		int []array3;
 		
-		// Can not do it as we have not provide it any memory/spce yet!
+		// Can not do it as we have not provide it any memory/space yet!
 		// array1[0] = 1;
 		
 		// Initialization, during initialization we have to provide the size of the array
@@ -60,6 +60,7 @@ public class P6_Task01_ArraysInJava {
 		int arr[] = { 50, 60, 70, 80};
 		for(int i=0; i <= arr.length; i++) {
 			System.out.println(arr[1]);
+			//break;
 		}
 		
 		// Multidimensional Array in Java

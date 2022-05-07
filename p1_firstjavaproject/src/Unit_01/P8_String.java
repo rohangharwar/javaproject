@@ -41,8 +41,6 @@ class QuestionsOnString {
 		      else
 		         System.out.println(s+" is not a palindrome");
 		  
-		
-
 	}
 
 	void reverseOfAString(String s) {

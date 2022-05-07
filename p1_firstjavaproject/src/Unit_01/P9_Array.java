@@ -20,7 +20,7 @@ public class P9_Array{
 		obj.findTheDuplicateElements(array);
 		obj.findSecondLargestAndSecondSmallestElement(array);
 		obj.leftRotationInAnArray(array);
-		obj.removeElementInArray(array); // (Optional)
+		obj.removeElementInArray(array,4); // (Optional)
 
 	}
 
@@ -89,10 +89,21 @@ class QuestionsOnArray {
 	}
 		
 
-	void removeElementInArray(int[] arr) {
-		
-	
-	
+	void removeElementInArray(int[] arr,int key) {
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]==key)
+			{
+				arr[i]=-1;
+				//showing deletion
+			}
+		}
+		System.out.println("\nAfter deletion of "+key+"(-1 represent deletion at tha position)\n");
+		for(int i=0;i<arr.length;i++)
+	 	{
+	 		System.out.print(arr[i]+" ");
+	 	}
+	 	System.out.print("\n");
 
 	}
 

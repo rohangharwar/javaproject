@@ -23,11 +23,11 @@ package Unit_02;
 
 abstract class Bike
 {
-	int a;
+	int a=5;
 	
 	Bike()
 	{
-		System.out.println("Inside Bike Constructor:"+a+"\n");
+		System.out.println("Inside Bike Constructor:"+ a );
 	}
 	
 	abstract void run();
@@ -40,8 +40,7 @@ abstract class Bike
 
 class Honda4 extends Bike
 {
-
-	@Override
+	
 	void run() {
 		System.out.println("Inside run method");
 		
@@ -70,6 +69,7 @@ final class Super
 	public int data=30;
 	void display()
 	{
+		//int data=78;
 		System.out.println(data);
 	}
 }

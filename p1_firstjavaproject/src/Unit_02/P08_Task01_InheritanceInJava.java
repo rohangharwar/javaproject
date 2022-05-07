@@ -1,6 +1,4 @@
 package Unit_02;
-
-
 /*
  * syntax:
  * 
@@ -22,13 +20,13 @@ public class P08_Task01_InheritanceInJava {
 	public static void main(String[] args) {
 		
 		Three g=new Three();
-		g.methodOne();
-		g.methodTwo();
+		//g.methodOne();
+		//g.methodTwo();
 		g.methodThree();
 		
-		Two two= new Two(1);
-		D obj =new D(2);
-		obj.methodFour();
+		//Two two= new Two(1);
+		//D obj =new D(2);
+		//obj.methodFour();
 		
 	}
 
@@ -41,6 +39,7 @@ class One
 	int a;
 	One(int x)
 	{
+		
 		System.out.println("One Constructor!");
 	}
 	
@@ -62,6 +61,7 @@ class Two extends One
 	
 	public void methodTwo()
 	{
+		
 		System.out.println("secondMethod!");
 	}
 }
@@ -104,7 +104,7 @@ class A
 	}
 }
 
-
+/*
 class B extends A
 {
 	int b;
@@ -150,4 +150,4 @@ class D extends A
 	{
 		System.out.println(d);
 	}
-}
+}*/
